@@ -1,0 +1,11 @@
+void-world: auth_void
+timeout-seconds: 60
+max-failed-attempts: 3
+min-password: 6
+max-password: 32
+
+# Pomijanie logowania dla graczy z premium (sprawdza nick w API Mojangu).
+# UWAGA: na serwerze offline-mode KAZDY moze wejsc na cudzym premium nicku
+# i ominac logowanie (np. na nicku admina!). Bezpieczna wersja to plugin FastLogin.
+# Wlaczaj tylko jesli rozumiesz ryzyko.
+premium-skip: false

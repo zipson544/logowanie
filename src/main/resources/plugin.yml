@@ -1,0 +1,30 @@
+name: VoidAuth
+version: 1.0
+main: pl.voidauth.VoidAuth
+api-version: "1.21"
+description: Logowanie w voidzie z bossbarem, baza SQLite, komenda zmiany hasla
+
+commands:
+  register:
+    description: Rejestracja konta
+    usage: /register <haslo> <powtorz>
+    aliases: [reg]
+  login:
+    description: Logowanie
+    usage: /login <haslo>
+    aliases: [l]
+  zmienhaslo:
+    description: Zmiana hasla
+    usage: /zmienhaslo <stare> <nowe>
+    aliases: [changepassword]
+  registerhelp:
+    description: Pomoc dla niezalogowanych
+    aliases: [loginhelp]
+  auth:
+    description: Komendy admina
+    usage: /auth <haslo|lista|reset|ustaw> ...
+    permission: voidauth.admin
+
+permissions:
+  voidauth.admin:
+    default: op
